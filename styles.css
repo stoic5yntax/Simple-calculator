@@ -1,0 +1,136 @@
+/* RESET AND ROOT */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --accent: #ef6515;
+  --dark-primary: #030637;
+  --dark-secondary: #1f2544;
+  --white: #fefefe;
+  --grey-dark: #3d3b40;
+  --grey-light: #eeedeb;
+}
+
+/* GENERAL STYLES */
+body {
+  align-items: center;
+  display: flex;
+  height: 100vh;
+  justify-content: center;
+  padding: 1rem;
+  width: 100vw;
+}
+
+input,
+button {
+  background: transparent;
+  border: none;
+  color: var(--white);
+  font-weight: bold;
+  outline: none;
+}
+
+button {
+  cursor: pointer;
+  font-size: 110%;
+}
+button:hover {
+  opacity: 0.875;
+}
+
+input {
+  height: 100%;
+  overflow: hidden;
+  text-align: right;
+  word-wrap: break-word;
+  width: 100%;
+}
+
+/* APP STYLES */
+.wrapper {
+  background: var(--dark-secondary);
+  box-shadow: 0 1px 2px 1px var(--grey-dark);
+  border-radius: 1.45rem;
+  display: grid;
+  height: 100%;
+  gap: 1rem;
+  grid-template-columns: 1fr;
+  grid-template-rows: 25% 1fr;
+  max-width: 360px;
+}
+
+/* App */
+.display-box,
+.keys-box {
+  padding: 1rem;
+  width: 100%;
+}
+
+.display-box {
+  border-radius: 1.45rem 1.45rem 0 0;
+  display: flex;
+  flex-direction: column;
+}
+
+#previous-el {
+  font-size: 130%;
+  font-weight: normal;
+  opacity: 0.65;
+}
+
+#current-el {
+  font-size: 280%;
+}
+
+.keys-box {
+  background: var(--dark-primary);
+  border-radius: 0 0 1.45rem 1.45rem;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0.85rem;
+}
+
+.keys-box button {
+  background: var(--grey-dark);
+  color: var(--white);
+  border-radius: 50%;
+  padding: 1rem auto !important;
+}
+
+.keys-box button:nth-child(4n) {
+  background: var(--accent);
+}
+.keys-box button:nth-child(2),
+.keys-box button:nth-child(3),
+.keys-box button:first-child {
+  background: var(--grey-light);
+  color: var(--dark-secondary);
+}
+
+@media screen and (max-width: 480px) {
+  body {
+    padding: 1rem;
+  }
+
+  .wrapper {
+    width: 100%;
+    max-height: 70%;
+  }
+
+  #previous-el {
+    font-size: 100%;
+  }
+
+  #current-el {
+    font-size: 160%;
+  }
+
+  button {
+    font-size: 100%;
+  }
+}

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Simple calculator</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script defer src="script.js"></script>
+  </head>
+  <body>
+    <article class="wrapper">
+      <!-- Display section -->
+      <div class="display-box">
+        <input type="text" id="previous-el" readonly />
+        <input type="text" id="current-el" placeholder="0" readonly />
+      </div>
+
+      <!-- keys section -->
+      <div class="keys-box">
+        <button onclick="appendNumber('%')">%</button>
+        <button onclick="appendNumber('*')">X</button>
+        <button onclick="appendNumber('/')">&div;</button>
+        <button id="delete">Del</button>
+
+        <button onclick="appendNumber('7')">7</button>
+        <button onclick="appendNumber('8')">8</button>
+        <button onclick="appendNumber('9')">9</button>
+        <button onclick="appendNumber('-')">&minus;</button>
+        <button onclick="appendNumber('4')">4</button>
+        <button onclick="appendNumber('5')">5</button>
+        <button onclick="appendNumber('6')">6</button>
+        <button onclick="appendNumber('+')">+</button>
+        <button onclick="appendNumber('1')">1</button>
+        <button onclick="appendNumber('2')">2</button>
+        <button onclick="appendNumber('3')">3</button>
+
+        <button id="equals">=</button>
+        <button onclick="appendNumber('0')">0</button>
+        <button onclick="appendNumber('C')" id="clear">AC</button>
+        <button onclick="appendNumber('.')">.</button>
+      </div>
+    </article>
+  </body>
+</html>
